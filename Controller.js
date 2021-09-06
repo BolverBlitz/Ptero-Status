@@ -15,8 +15,7 @@ const Controller = new Status.Controller(process.env.PORT, 'en', {
         tgchatID: process.env.TELEGRAM_CHATID
     },
     notifications: {
-        discord: process.env.DISCORD_WEBHOOK,
-        webhook: 'http://0.0.0.0:5000/webhook'
+        discord: process.env.DISCORD_WEBHOOK
     },
     node: {
         message: '**{node.name}**: [Memory: {node.memory.used}/{node.memory.total}] [Disk: {node.disk.used}/{node.disk.total}]',
