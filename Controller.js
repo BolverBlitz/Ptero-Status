@@ -1,7 +1,7 @@
 require('dotenv').config();
 const Status = require('./index');
 
-const Controller = new Status.Controller(4000, 'en', {
+const Controller = new Status.Controller(process.env.PORT, 'en', {
     discord: {
         token: process.env.TOKEN,
         channel: process.env.CHANNEL,
