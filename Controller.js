@@ -10,6 +10,10 @@ const Controller = new Status.Controller(process.env.PORT, 'en', {
         panel: process.env.PANEL_URL,
         apiKey: process.env.PANEL_API_KEY
     },
+    telegram: {
+        tgtoken: process.env.TELEGRAM_TOKEN,
+        tgchatID: process.env.TELEGRAM_CHATID
+    },
     notifications: {
         discord: process.env.DISCORD_WEBHOOK,
         webhook: 'http://0.0.0.0:5000/webhook'
