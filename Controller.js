@@ -20,8 +20,8 @@ const Controller = new Status.Controller(process.env.PORT, 'en', {
     },
     node: {
         message: '**{node.name}**: [Memory: {node.memory.used}/{node.memory.total}] [Disk: {node.disk.used}/{node.disk.total}]',
-        online: '🟢',
-        offline: '🔴'
+        online: '🟢 **Online**',
+        offline: '🔴 **Offline**'
     },
     embed: {
         color: '#06cce2',
