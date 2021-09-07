@@ -10,6 +10,7 @@ const Controller = new Status.Controller(process.env.PORT, 'en', {
         panel: process.env.PANEL_URL,
         apiKey: process.env.PANEL_API_KEY
     },
+    /*
     telegram: {
         tgtoken: process.env.TELEGRAM_TOKEN,
         tgchatID: process.env.TELEGRAM_CHATID
@@ -17,6 +18,7 @@ const Controller = new Status.Controller(process.env.PORT, 'en', {
     notifications: {
         discord: process.env.DISCORD_WEBHOOK
     },
+    */
     node: {
         message: '{node.status} **{node.name}**: {node.cpu.used} {node.cpu}\nMemory: {node.memory.used}/{node.memory.total}] [Disk: {node.disk.used}/{node.disk.total}\n',
         online: '🟢',
