@@ -18,14 +18,14 @@ const Controller = new Status.Controller(process.env.PORT, 'en', {
         discord: process.env.DISCORD_WEBHOOK
     },
     node: {
-        message: '{node.status} **{node.name}**: {node.cpu.used}/{node.cpu.cores} {node.cpu}\nMemory: {node.memory.used}/{node.memory.total}] [Disk: {node.disk.used}/{node.disk.total}',
+        message: '{node.status} **{node.name}**: {node.cpu.used} {node.cpu}\nMemory: {node.memory.used}/{node.memory.total}] [Disk: {node.disk.used}/{node.disk.total}\n',
         online: '🟢',
         offline: '🔴'
     },
     embed: {
         color: '#06cce2',
         title: 'Node Status',
-        description: '**Nodes**:\n{nodes.list}\n\n**Total**:\nCPU: {cores.total}\nMemory: {memory.used}/{memory.total}\nDisk: {disk.used}/{disk.total}\n\n**Pterodactyl:**\nUsers: {pterodactyl.users}\nServers: {pterodactyl.servers}',
+        description: '**Nodes**:\n{nodes.list}\n\n**Total**:\nMemory: {memory.used}/{memory.total}\nDisk: {disk.used}/{disk.total}\n\n**Pterodactyl:**\nUsers: {pterodactyl.users}\nServers: {pterodactyl.servers}',
         footer: {
             text: 'Last updated:',
             icon: 'https://ebg.pw/images/EBG.png'
