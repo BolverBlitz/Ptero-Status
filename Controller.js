@@ -18,16 +18,16 @@ const Controller = new Status.Controller(process.env.PORT, 'en', {
         discord: process.env.DISCORD_WEBHOOK
     },
     node: {
-        message: '**{node.name}**: [Memory: {node.memory.used}/{node.memory.total}] [Disk: {node.disk.used}/{node.disk.total}]',
-        online: '🟢 **Online**',
-        offline: '🔴 **Offline**'
+        message: '{node.status} **{node.name}**: {node.cpu.used}/{node.cpu.cores} {node.cpu}\nMemory: {node.memory.used}/{node.memory.total}] [Disk: {node.disk.used}/{node.disk.total}',
+        online: '🟢',
+        offline: '🔴'
     },
     embed: {
         color: '#06cce2',
         title: 'Node Status',
-        description: '**Nodes**:\n{nodes.list}\n\n**Total**:\nCPU: {node.cpu.used}/{cores.total}\nMemory: {memory.used}/{memory.total}\nDisk: {disk.used}/{disk.total}\n\n**Pterodactyl:**\nUsers: {pterodactyl.users}\nServers: {pterodactyl.servers}',
+        description: '**Nodes**:\n{nodes.list}\n\n**Total**:\nCPU: {cores.total}\nMemory: {memory.used}/{memory.total}\nDisk: {disk.used}/{disk.total}\n\n**Pterodactyl:**\nUsers: {pterodactyl.users}\nServers: {pterodactyl.servers}',
         footer: {
-            text: 'Last updated: {lastupdated}',
+            text: 'Last updated:',
             icon: 'https://ebg.pw/images/EBG.png'
         }
     },
