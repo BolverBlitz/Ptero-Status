@@ -131,7 +131,9 @@ class Panel extends EventEmitter {
         let that = this;
         setInterval(() => {
             that.log('Updating embed');
-            that.updateEmbed();
+            that.updateEmbed().catch(error => {
+                this.elog(error);
+            });
         }, this.interval);
     }
 
